@@ -1,0 +1,14 @@
+﻿
+@model UpLoadPhotoMVC.Entities.Product
+
+<h1>
+    Thêm mới sản phẩm
+</h1>
+<form asp - controller="Photo" asp-action="Create" method="post" enctype="multipart/form-data">
+    Id: <input type="text" asp-for="ProductId" />
+    Name: <input type="text" asp-for="Name" />
+    Price: <input type="text" asp-for="Price" />
+    Photo: <input type="file" name="hinhanh" />
+     
+    <input type="submit" value="add new" />
+</form>
