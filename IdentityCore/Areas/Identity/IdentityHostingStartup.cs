@@ -18,7 +18,7 @@ namespace IdentityCore.Areas.Identity
             builder.ConfigureServices((context, services) => {
                 services.AddDbContext<IdentityCoreContext>(options =>
                     options.UseSqlServer(
-                        context.Configuration.GetConnectionString("IdentityCoreContextConnection")));
+                        context.Configuration.GetConnectionString("ConnectionString")));
 
                 services.AddDefaultIdentity<IdentityCoreUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<IdentityCoreContext>();
