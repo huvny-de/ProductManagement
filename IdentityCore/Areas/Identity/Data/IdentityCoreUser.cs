@@ -15,6 +15,6 @@ namespace IdentityCore.Areas.Identity.Data
         public string Firstname { get; set; }
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
-        public string LastName { get; set; }
+        public string lastname { get; set; }
     }
 }
