@@ -1,4 +1,5 @@
 ﻿using IdentityCore.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -23,6 +24,7 @@ namespace IdentityCore.Controllers
             return View();
         }
 
+        [Authorize] // phải đăng nhập mới xem đc
         public IActionResult Privacy()
         {
             return View();
