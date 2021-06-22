@@ -84,7 +84,7 @@ namespace IdentityCore.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityCoreUser { UserName = Input.Email, Email = Input.Email };
+                var user = new IdentityCoreUser { UserName = Input.Email, Email = Input.Email , lastname = Input.LastName, Firstname = Input.FirstName}; // edit input parameter
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
