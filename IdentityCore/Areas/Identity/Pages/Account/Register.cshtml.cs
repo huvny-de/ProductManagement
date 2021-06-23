@@ -53,7 +53,7 @@ namespace IdentityCore.Areas.Identity.Pages.Account
             [Display(Name = "LastName")]
             public string LastName { get; set; }
             [Required]
-          
+
             public string Phone { get; set; }
             [Required]
             [EmailAddress]
@@ -84,7 +84,7 @@ namespace IdentityCore.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new AppUsers { UserName = Input.Email, Email = Input.Email , lastname = Input.LastName, Firstname = Input.FirstName}; // edit input parameter
+                var user = new AppUsers { UserName = Input.Email, Email = Input.Email, lastname = Input.LastName, Firstname = Input.FirstName, PhoneNumber = Input.Phone }; // edit input parameter
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

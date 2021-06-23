@@ -24,7 +24,8 @@ namespace IdentityCore.Controllers
             return View();
         }
 
-        [Authorize] // phải đăng nhập mới xem đc
+        //[Authorize] // Authorized user
+        [Authorize(Roles = "Admin")] // Only Admin Role
         public IActionResult Privacy()
         {
             return View();
