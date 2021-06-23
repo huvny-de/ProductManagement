@@ -20,14 +20,14 @@ namespace IdentityCore.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<IdentityCoreUser> _signInManager;
-        private readonly UserManager<IdentityCoreUser> _userManager;
+        private readonly SignInManager<AppUsers> _signInManager;
+        private readonly UserManager<AppUsers> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<IdentityCoreUser> userManager,
-            SignInManager<IdentityCoreUser> signInManager,
+            UserManager<AppUsers> userManager,
+            SignInManager<AppUsers> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -84,7 +84,7 @@ namespace IdentityCore.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityCoreUser { UserName = Input.Email, Email = Input.Email , lastname = Input.LastName, Firstname = Input.FirstName}; // edit input parameter
+                var user = new AppUsers { UserName = Input.Email, Email = Input.Email , lastname = Input.LastName, Firstname = Input.FirstName}; // edit input parameter
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

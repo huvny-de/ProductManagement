@@ -18,13 +18,13 @@ namespace IdentityCore.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LoginModel : PageModel
     {
-        private readonly UserManager<IdentityCoreUser> _userManager;
-        private readonly SignInManager<IdentityCoreUser> _signInManager;
+        private readonly UserManager<AppUsers> _userManager;
+        private readonly SignInManager<AppUsers> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<IdentityCoreUser> signInManager, 
+        public LoginModel(SignInManager<AppUsers> signInManager, 
             ILogger<LoginModel> logger,
-            UserManager<IdentityCoreUser> userManager)
+            UserManager<AppUsers> userManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

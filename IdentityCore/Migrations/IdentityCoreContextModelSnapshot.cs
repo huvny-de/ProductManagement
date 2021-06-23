@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IdentityCore.Migrations
 {
-    [DbContext(typeof(IdentityCoreContext))]
+    [DbContext(typeof(DbIdentityContext))]
     partial class IdentityCoreContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -19,7 +19,7 @@ namespace IdentityCore.Migrations
                 .HasAnnotation("ProductVersion", "5.0.7")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("IdentityCore.Areas.Identity.Data.IdentityCoreUser", b =>
+            modelBuilder.Entity("IdentityCore.Areas.Identity.Data.AppUsers", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -39,9 +39,6 @@ namespace IdentityCore.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Firstname")
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("LastName")
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -77,6 +74,9 @@ namespace IdentityCore.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("lastname")
+                        .HasColumnType("nvarchar(100)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -88,6 +88,27 @@ namespace IdentityCore.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "cf8ecd18-5e1d-43d5-a185-def1b9c73ebe",
+                            Email = "huvny@gmail.com",
+                            EmailConfirmed = true,
+                            Firstname = "Henry",
+                            LockoutEnabled = false,
+                            NormalizedEmail = "huvny@gmail.com",
+                            NormalizedUserName = "huvny@gmail.com",
+                            PasswordHash = "AQAAAAEAACcQAAAAEF4EX0o18s/BhfYNQ4WvnhY1l7OD+DwyhXxOcqcnJBNSJvMHYYVO3tY9LyEiAJHz2Q==",
+                            PhoneNumber = "0954683265",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "dbffcd2f-6810-40d7-b80a-682dc9ead601",
+                            TwoFactorEnabled = false,
+                            UserName = "huvny@gmail.com",
+                            lastname = "de Aaron"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -115,6 +136,15 @@ namespace IdentityCore.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
+                            ConcurrencyStamp = "7efb45fb-2db6-4976-b4d4-b46afd1c0f82",
+                            Name = "admin",
+                            NormalizedName = "admin"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -202,6 +232,13 @@ namespace IdentityCore.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                            RoleId = "2c5e174e-3b0e-446f-86af-483d56fd7210"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -236,7 +273,7 @@ namespace IdentityCore.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("IdentityCore.Areas.Identity.Data.IdentityCoreUser", null)
+                    b.HasOne("IdentityCore.Areas.Identity.Data.AppUsers", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -245,7 +282,7 @@ namespace IdentityCore.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("IdentityCore.Areas.Identity.Data.IdentityCoreUser", null)
+                    b.HasOne("IdentityCore.Areas.Identity.Data.AppUsers", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -260,7 +297,7 @@ namespace IdentityCore.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("IdentityCore.Areas.Identity.Data.IdentityCoreUser", null)
+                    b.HasOne("IdentityCore.Areas.Identity.Data.AppUsers", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -269,7 +306,7 @@ namespace IdentityCore.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("IdentityCore.Areas.Identity.Data.IdentityCoreUser", null)
+                    b.HasOne("IdentityCore.Areas.Identity.Data.AppUsers", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

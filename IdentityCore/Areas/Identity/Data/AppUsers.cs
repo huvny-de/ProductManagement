@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity;
 namespace IdentityCore.Areas.Identity.Data
 {
     // Add profile data for application users by adding properties to the IdentityCoreUser class
-    public class IdentityCoreUser : IdentityUser
+    public class AppUsers : IdentityUser
     {
         [PersonalData]
         [Column(TypeName = "nvarchar(100)")]
