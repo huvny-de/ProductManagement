@@ -23,13 +23,21 @@ namespace IdentityCore.Controllers
         {
             return View();
         }
+        [Authorize(Roles ="admin")]
+        public IActionResult PrivacyForAdmin()
+        {
+            return View();
+        }
 
-        //[Authorize] // Authorized user
-        [Authorize(Roles = "Admin")] // Only Admin Role
+        [Authorize] // Authorized user
+        //[Authorize(Roles = = "admin")] // Only Admin Role
+        //[Authorize(Roles = "admin")]
         public IActionResult Privacy()
         {
             return View();
         }
+        [Authorize(Roles ="admin")]
+    
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -27,6 +27,7 @@ namespace IdentityCore
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
+        
             //services.AddDbContext<IdentityCoreContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
         }
 
@@ -44,6 +45,7 @@ namespace IdentityCore
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
