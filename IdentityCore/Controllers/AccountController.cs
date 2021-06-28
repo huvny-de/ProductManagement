@@ -133,22 +133,22 @@ namespace IdentityCore.Controllers
         {
             var user = _context.Users.Where(x => x.Id == id).FirstOrDefault();
             var result = await _userManager.DeleteAsync(user);
-            return View("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         // POST: AccountController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Delete(int id, IFormCollection collection)
+        //{
+        //    try
+        //    {
+        //        return RedirectToAction(nameof(Index));
+        //    }
+        //    catch
+        //    {
+        //        return View();
+        //    }
+        //}
     }
 }
