@@ -14,5 +14,6 @@ namespace IdentityCore.Models
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
 
+
     }
 }

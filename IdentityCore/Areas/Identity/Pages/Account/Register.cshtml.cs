@@ -46,6 +46,10 @@ namespace IdentityCore.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            //[Required]
+            //[Display(Name = "UserName")]
+            //public string UserName { get; set; }
+
             [Required]
             [Display(Name = "FirstName")]
             public string FirstName { get; set; }

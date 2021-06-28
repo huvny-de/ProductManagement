@@ -169,3 +169,4 @@ C:\Users\Henry\source\repos\ProductManagement\IdentityCore\obj\Debug\net5.0\Razo
 C:\Users\Henry\source\repos\ProductManagement\IdentityCore\obj\Debug\net5.0\Razor\Views\Account\Index.cshtml.g.cs
 C:\Users\Henry\source\repos\ProductManagement\IdentityCore\obj\Debug\net5.0\Razor\Views\Account\Details.cshtml.g.cs
 C:\Users\Henry\source\repos\ProductManagement\IdentityCore\obj\Debug\net5.0\Razor\Views\Account\Create.cshtml.g.cs
+C:\Users\Henry\source\repos\ProductManagement\IdentityCore\obj\Debug\net5.0\Razor\Views\Account\Edit.cshtml.g.cs

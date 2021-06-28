@@ -112,7 +112,9 @@ namespace IdentityCore.Controllers
             {
                 // Lấy lại User có Id = id
                 var user = _context.Users.Where(x => x.Id == id).FirstOrDefault();
-                user.Firstname = collection["FirstName"];
+                user.UserName = collection["UserName"];
+                user.Email = collection["Email"];
+                user.Firstname = collection["Firstname"];
                 user.lastname = collection["LastName"];
                 user.PhoneNumber = collection["PhoneNumber"];
 
