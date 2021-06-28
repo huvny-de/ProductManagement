@@ -10,6 +10,16 @@ using System.Threading.Tasks;
 
 namespace IdentityCore.Controllers
 {
+    //CRUD:
+    //Index : --> Liệt kê danh sách phần tử
+    // Details: Chi tiết 1 phần tử
+    // Create: Tạo mới
+    //  - Http get: Hiện trang nhập dữ liệu
+    //  - Htpp post: Tạo mới dữ liệu
+    // Edit:
+    //  - Http get: Hiện trang load lại dữ liệu cũ của phần tử cập nhật
+    //  - Http post: Thao tác cập nhật dữ liệu
+    // Delete: Xóa dữ liệu
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -23,7 +33,7 @@ namespace IdentityCore.Controllers
         {
             return View();
         }
-        [Authorize(Roles ="admin")]
+        [Authorize(Roles = "admin")]    
         public IActionResult PrivacyForAdmin()
         {
             return View();
@@ -36,9 +46,6 @@ namespace IdentityCore.Controllers
         {
             return View();
         }
-        [Authorize(Roles ="admin")]
-    
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
