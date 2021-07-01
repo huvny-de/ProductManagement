@@ -22,7 +22,7 @@ namespace IdentityCore.Areas.Identity.Pages.Account
         private readonly SignInManager<AppUsers> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<AppUsers> signInManager, 
+        public LoginModel(SignInManager<AppUsers> signInManager,
             ILogger<LoginModel> logger,
             UserManager<AppUsers> userManager)
         {
@@ -77,7 +77,7 @@ namespace IdentityCore.Areas.Identity.Pages.Account
             returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-        
+
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
@@ -85,7 +85,11 @@ namespace IdentityCore.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User logged in.");
+                    _logger.LogInformation("User logged in - " + DateTime.Now);
+                    //var user = await GetCurrentUserAsync();
+
+
+
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

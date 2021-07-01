@@ -1,0 +1,14 @@
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\bin\Debug\ConsumingDesktopApp.exe.config
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\bin\Debug\ConsumingDesktopApp.exe
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\bin\Debug\ConsumingDesktopApp.pdb
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.csproj.AssemblyReference.cache
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.Form1.resources
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.Properties.Resources.resources
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.csproj.GenerateResource.cache
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.csproj.CoreCompileInputs.cache
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.exe
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.pdb
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\bin\Debug\MyWebservice.dll
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\bin\Debug\MyWebservice.pdb
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\bin\Debug\MyWebservice.dll.config
+C:\Users\Henry\source\repos\ProductManagement\ConsumingDesktopApp\obj\Debug\ConsumingDesktopApp.csproj.CopyComplete
