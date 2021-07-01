@@ -8,6 +8,7 @@ namespace DAL
 {
     public class IRepositoryCustomer : IRepository<Customer>
     {
+        //ApplicationDbContext _context;
         public void Create(Customer _object)
         {
             throw new NotImplementedException();

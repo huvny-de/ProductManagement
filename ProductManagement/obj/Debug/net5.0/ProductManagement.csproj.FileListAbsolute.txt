@@ -154,3 +154,9 @@ C:\Users\Henry\source\repos\ProductManagement\ProductManagement\obj\Debug\net5.0
 C:\Users\Henry\source\repos\ProductManagement\ProductManagement\obj\Debug\net5.0\Razor\Views\Categories\Details.cshtml.g.cs
 C:\Users\Henry\source\repos\ProductManagement\ProductManagement\obj\Debug\net5.0\Razor\Views\Categories\Edit.cshtml.g.cs
 C:\Users\Henry\source\repos\ProductManagement\ProductManagement\obj\Debug\net5.0\Razor\Views\Categories\Index.cshtml.g.cs
+C:\Users\Henry\source\repos\ProductManagement\ProductManagement\bin\Debug\net5.0\ConsumingDesktopApp.exe
+C:\Users\Henry\source\repos\ProductManagement\ProductManagement\bin\Debug\net5.0\MyWebservice.dll
+C:\Users\Henry\source\repos\ProductManagement\ProductManagement\bin\Debug\net5.0\ConsumingDesktopApp.pdb
+C:\Users\Henry\source\repos\ProductManagement\ProductManagement\bin\Debug\net5.0\ConsumingDesktopApp.exe.config
+C:\Users\Henry\source\repos\ProductManagement\ProductManagement\bin\Debug\net5.0\MyWebservice.pdb
+C:\Users\Henry\source\repos\ProductManagement\ProductManagement\bin\Debug\net5.0\MyWebservice.dll.config

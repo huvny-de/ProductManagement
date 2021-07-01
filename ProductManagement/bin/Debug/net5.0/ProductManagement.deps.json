@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ProductManagement/1.0.0": {
         "dependencies": {
+          "ConsumingDesktopApp": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.6",
@@ -1811,6 +1812,25 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "ConsumingDesktopApp/1.0.0": {
+        "dependencies": {
+          "MyWebservice": "1.0.0"
+        },
+        "runtime": {
+          "ConsumingDesktopApp.exe": {}
+        },
+        "compile": {
+          "ConsumingDesktopApp.exe": {}
+        }
+      },
+      "MyWebservice/1.0.0": {
+        "runtime": {
+          "MyWebservice.dll": {}
+        },
+        "compile": {
+          "MyWebservice.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
@@ -4374,6 +4394,16 @@
       "sha512": "sha512-VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "ConsumingDesktopApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyWebservice/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",
