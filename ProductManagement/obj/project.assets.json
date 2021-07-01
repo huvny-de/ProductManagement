@@ -2010,6 +2010,27 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ConsumingDesktopApp/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MyWebservice": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ConsumingDesktopApp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsumingDesktopApp.dll": {}
+        }
+      },
+      "MyWebservice/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/MyWebservice.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyWebservice.dll": {}
+        }
       }
     }
   },
@@ -7098,10 +7119,21 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ConsumingDesktopApp/1.0.0": {
+      "type": "project",
+      "path": "../ConsumingDesktopApp/ConsumingDesktopApp.csproj",
+      "msbuildProject": "../ConsumingDesktopApp/ConsumingDesktopApp.csproj"
+    },
+    "MyWebservice/1.0.0": {
+      "type": "project",
+      "path": "../MyWebservice/MyWebservice.csproj",
+      "msbuildProject": "../MyWebservice/MyWebservice.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ConsumingDesktopApp >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.6",
@@ -7138,7 +7170,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj": {
+              "projectPath": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

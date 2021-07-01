@@ -4,6 +4,35 @@
     "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ProductManagement\\ProductManagement.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj",
+        "projectName": "ConsumingDesktopApp",
+        "projectPath": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "C:\\Users\\Henry\\source\\repos\\ProductManagement\\MyWebservice\\MyWebservice.csproj": {
+                "projectPath": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\MyWebservice\\MyWebservice.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "C:\\Users\\Henry\\source\\repos\\ProductManagement\\MyWebservice\\MyWebservice.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\MyWebservice\\MyWebservice.csproj",
+        "projectName": "MyWebservice",
+        "projectPath": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\MyWebservice\\MyWebservice.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ProductManagement\\ProductManagement.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,7 +59,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj": {
+                "projectPath": "C:\\Users\\Henry\\source\\repos\\ProductManagement\\ConsumingDesktopApp\\ConsumingDesktopApp.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
